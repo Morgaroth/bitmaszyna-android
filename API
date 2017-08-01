@@ -1,0 +1,56 @@
+API publiczne:
+
+https://bitmaszyna.pl/api/BTCPLN/ticker.json
+
+Zwraca stan danego rynku.
+
+https://bitmaszyna.pl/api/BTCPLN/depth.json
+https://bitmaszyna.pl/api/BTCPLN/depthSimple.json
+
+Zwraca liste ofert bid i ask.
+
+https://bitmaszyna.pl/api/BTCPLN/transactions.json
+
+Zwraca ostatnie transakcje.
+
+API prywatne:
+
+Wysyłane metodą POST. Dodatkowo należy dołączyć następujące nagłówki żądania:
+Rest-Key: klucz z Moje Konto/Klucze API
+Rest-Sign: podpis danych wysyłanych jako zawartość generowany algorytmem ECDSA (podpis cyfrowy używany w protokole bitcoin do podpisywania transakcji). Program wyliczający ten podpis można znaleźć tutaj: https://github.com/Ghimli/sign lub https://github.com/Ghimli/signphp
+Parametr nonce to stale rosnąca wartość całkowita.
+
+https://bitmaszyna.pl/api/funds
+
+Pola: nonce
+Zwraca stan środków na koncie.
+
+https://bitmaszyna.pl/api/BTCPLN/buy
+
+Pola: nonce,amount(0.12),price(1850.0),offer(true)
+Kupno na danym rynku.
+
+https://bitmaszyna.pl/api/BTCPLN/sell
+
+Pola: nonce,amount(0.12),price(1850.0),offer(false)
+Sprzedaż na danym rynku.
+
+https://bitmaszyna.pl/api/canceloffer
+
+Pola: nonce,id
+Anulowanie oferty.
+
+https://bitmaszyna.pl/api/offers
+
+Pola: nonce
+Zwraca wszystkie aktywne oferty użytkownika.
+
+https://bitmaszyna.pl/api/history
+
+Pola: nonce
+Zwraca historie użytkownika.
+
+https://bitmaszyna.pl/api/withdrawal
+
+Pola: nonce,cur('PLN'),account('69114027862222435623440000'),amount('127.00'),[express('true')]
+Zlecenie wypłaty środków.

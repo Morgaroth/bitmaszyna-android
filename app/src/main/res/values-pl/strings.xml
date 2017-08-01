@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BitMaszyna</string>
+    <string name="ask">Sprzedaż</string>
+    <string name="bid">Skup</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="your_offers">Moje oferty</string>
+    <string name="transactions">Transakcje</string>
+</resources>
