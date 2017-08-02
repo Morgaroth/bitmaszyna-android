@@ -6,7 +6,6 @@ import android.support.v4.app.ListFragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 
 class ASKFragment : ListFragment() {
 
@@ -16,7 +15,7 @@ class ASKFragment : ListFragment() {
         val root = inflater!!.inflate(R.layout.ask, null) as ViewGroup
 
         val data = arguments.getParcelableArrayList<Offer>(Data.ASKS_KEY).toList().sortedBy { it.price }
-        val adapter = ArrayAdapter<String>(inflater.context, android.R.layout.simple_list_item_1, data.map { it.toString() })
+        val adapter = OfferArrayAdapter(data, activity)
 
         listAdapter = adapter
         return root
