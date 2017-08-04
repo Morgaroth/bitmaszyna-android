@@ -17,7 +17,8 @@ API prywatne:
 
 Wysyłane metodą POST. Dodatkowo należy dołączyć następujące nagłówki żądania:
 Rest-Key: klucz z Moje Konto/Klucze API
-Rest-Sign: podpis danych wysyłanych jako zawartość generowany algorytmem ECDSA (podpis cyfrowy używany w protokole bitcoin do podpisywania transakcji). Program wyliczający ten podpis można znaleźć tutaj: https://github.com/Ghimli/sign lub https://github.com/Ghimli/signphp
+Rest-Sign: podpis danych wysyłanych jako zawartość generowany algorytmem ECDSA (podpis cyfrowy używany w protokole bitcoin do podpisywania transakcji).
+Program wyliczający ten podpis można znaleźć tutaj: https://github.com/Ghimli/sign lub https://github.com/Ghimli/signphp
 Parametr nonce to stale rosnąca wartość całkowita.
 
 https://bitmaszyna.pl/api/funds
